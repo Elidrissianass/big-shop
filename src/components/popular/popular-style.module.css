@@ -1,0 +1,70 @@
+.Popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 64px 0 64px 0;
+}
+.Popular > h2 {
+  padding-bottom: 64px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 477px;
+}
+
+.container {
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+}
+
+.container > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: ease 0.2s;
+}
+.container:hover > img {
+  transform: scale(1.07);
+  transition: ease 0.2s;
+}
+
+.container > .text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 247, 247, 0.15);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: ease 0.2s;
+}
+.container:hover > .text {
+  transform: scale(1.07);
+  transition: ease 0.2s;
+  background-color: rgb(247, 247, 247, 0);
+}
+
+.text > p {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  opacity: 0.3;
+}
+.container:hover > .text > p {
+  opacity: 1;
+}
