@@ -1,6 +1,10 @@
 * {
   margin: 0;
 }
+::selection {
+  background: #777;
+  border-radius: 10px;
+}
 body {
   margin: 0;
   background-color: rgb(247, 247, 247, 0.5);

@@ -3,8 +3,9 @@ import * as css from "./header-style.module.css";
 import { Link } from "react-router-dom";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = ({ basket }) => {
   return (
     <nav className={css.header}>
       <Link to="/" className={css.logo}>
@@ -21,7 +22,7 @@ const Header = () => {
         <Link to="/basket" className={css.link}>
           <div className={css.basket}>
             <ShoppingBasketIcon style={{ marginRight: "6px" }} />
-            <span>0</span>
+            <span>{basket.length}</span>
           </div>
         </Link>
       </div>
@@ -29,4 +30,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return { basket: state.basket };
+};
+
+export default connect(mapStateToProps)(Header);

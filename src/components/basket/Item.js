@@ -4,14 +4,9 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import Button from "@material-ui/core/Button";
 
-const Item = ({ src, title, description, price }) => {
-  const [quantity, setquantity] = useState(0);
-  const addQuantity = () => {
-    setquantity(quantity + 1);
-  };
-  const subQuantity = () => {
-    setquantity(quantity > 0 ? quantity - 1 : quantity);
-  };
+const Item = ({ src, title, description, price, quantity }) => {
+  /* Quantity state */
+
   return (
     <div className={css.item}>
       <div className={css.img}>
@@ -21,9 +16,9 @@ const Item = ({ src, title, description, price }) => {
         <h2>{title}</h2>
         <h4>{description}</h4>
         <div className={css.quantity}>
-          <ArrowDropUpIcon onClick={addQuantity} />
+          <ArrowDropUpIcon />
           <input type="text" disabled value={quantity}></input>
-          <ArrowDropDownIcon onClick={subQuantity} />
+          <ArrowDropDownIcon />
         </div>
         <h3>{price}</h3>
         <Button>Remove from basket</Button>

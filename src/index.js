@@ -3,18 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// import { Provider } from "react-redux";
-// import { createStore } from "redux";
-// import reducer from "./redux/reducers/reducer";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./redux/reducers/reducer";
 
-//const BigStore = createStore(reducer);
+const BigStore = createStore(reducer);
 
 ReactDOM.render(
-  //<Provider store={BigStore}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  //</Provider>,
+  <Provider store={BigStore}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );
 
