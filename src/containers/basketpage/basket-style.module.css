@@ -2,3 +2,41 @@
   max-width: 1500px;
   margin: auto;
 }
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.empty > h2 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-style: italic;
+}
+.empty > img {
+  padding-left: 128px;
+  padding-bottom: 24px;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: flex-end;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.total > input {
+  width: 72px;
+  height: 24px;
+  margin-right: 45px;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  text-align: center;
+  outline-width: 0;
+  font-size: 16px;
+}
+.total > span {
+  margin-top: 3px;
+  margin-right: 6px;
+}

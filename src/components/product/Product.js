@@ -11,7 +11,7 @@ const Product = ({ id, src, title, description, price, pushToBasket }) => {
       <div className={css.info}>
         <h2>{title}</h2>
         <h4>{description}</h4>
-        <h3>{price}</h3>
+        <h3>$ {price}</h3>
         <Button onClick={pushToBasket}>Add to Cart</Button>
       </div>
     </div>

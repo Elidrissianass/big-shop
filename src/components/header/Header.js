@@ -6,6 +6,9 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { connect } from "react-redux";
 
 const Header = ({ basket }) => {
+  let length = 0;
+  basket.map((item) => (length += item.quantity));
+
   return (
     <nav className={css.header}>
       <Link to="/" className={css.logo}>
@@ -22,7 +25,7 @@ const Header = ({ basket }) => {
         <Link to="/basket" className={css.link}>
           <div className={css.basket}>
             <ShoppingBasketIcon style={{ marginRight: "6px" }} />
-            <span>{basket.length}</span>
+            <span>{length}</span>
           </div>
         </Link>
       </div>
