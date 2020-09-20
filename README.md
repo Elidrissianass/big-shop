@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `LIVE DEMO VERSION `
+
+> ->
+> [https://big-shop-30b60.web.app](https://big-shop-30b60.web.app) <br />
+> to view it in the browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
