@@ -3,6 +3,7 @@ import {
   ADD_QUANTITY,
   SUB_QUANTITY,
   REMOVE_FROM_BASKET,
+  SET_USER,
 } from "../actions/actions";
 
 import item from "../../assets/images/item.jpg";
@@ -53,6 +54,8 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     /* adds an item to the basket */
+    case SET_USER:
+      return { ...state, user: action.user };
     case ADD_TO_BASKET:
       let addedItem = state.products.find((item) => item.id === action.id);
       if (addedItem?.id) {

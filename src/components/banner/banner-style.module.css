@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: repeat;
   background-position: center center;
+  overflow: hidden;
 }
 .inner {
   display: flex;

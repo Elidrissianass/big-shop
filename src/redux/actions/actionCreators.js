@@ -3,6 +3,7 @@ import {
   ADD_QUANTITY,
   SUB_QUANTITY,
   REMOVE_FROM_BASKET,
+  SET_USER,
 } from "./actions";
 
 export const addToBasket = (id) => {
@@ -16,4 +17,7 @@ export const addQuantity = (id) => {
 };
 export const subQuantity = (id) => {
   return { type: SUB_QUANTITY, id };
+};
+export const setUser = (user) => {
+  return { type: SET_USER, user };
 };
